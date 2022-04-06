@@ -1,3 +1,5 @@
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct-single.svg)](https://stand-with-ukraine.pp.ua)
+
 # Robots.txt generator service
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
@@ -21,6 +23,7 @@ composer require mad-web/laravel-robots
 ## Usage
 
 Setting a condition in your `AppServiceProvider` that determines whether the site should be indexed.
+
 ```php
 use MadWeb\Robots\RobotsFacade;
 
@@ -36,10 +39,13 @@ public function boot()
 You can create simple single action controller for generating robots.txt
 
 **/routes/web.php**
+
 ```php
 Route::get('robots.txt', 'RobotsController');
 ```
+
 **/app/Http/Controllers/Robots**
+
 ```php
 namespace App\Http\Controllers;
 
@@ -70,9 +76,10 @@ class RobotsController extends Controller
 ```
 
 Add robots meta tag into your view inside the `<head>` tag
+
 ```html
 <head>
-	{!! Robots::metaTag() !!}
+ {!! Robots::metaTag() !!}
 </head>
 ```
 
@@ -83,7 +90,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 ## Testing
 
 ``` bash
-$ composer test
+composer test
 ```
 
 ## Contributing
